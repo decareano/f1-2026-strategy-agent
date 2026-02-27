@@ -37,10 +37,19 @@ pit_wall_agent = Agent(
 if __name__ == "__main__":
     print("--- 2026 RACE CONTROL ACTIVE ---")
     
+    #scenario = """
+    #Lap 58 of 70, Montreal. P2, 0.8s lead. Tyres 28 laps old. 
+    #Current flow: 2600 MJ/h. Rival has Manual Override.
+    #Can we defend at 3000 MJ/h? Calculate Lap 60 time (1:14.119 base).
+    #"""
+
+    # SCENARIO 2: Final Lap Defense (Low Battery)
     scenario = """
-    Lap 58 of 70, Montreal. P2, 0.8s lead. Tyres 28 laps old. 
-    Current flow: 2600 MJ/h. Rival has Manual Override.
-    Can we defend at 3000 MJ/h? Calculate Lap 60 time (1:14.119 base).
+    FINAL LAP (70/70). P1, Gap to P2 is only 0.4s. 
+    CRITICAL: Battery is at 5%. Tyres are shot (32 laps old). 
+    The rival is using Manual Override on the straight.
+    Should we use our last 3000 MJ/h burst now, or harvest? 
+    Calculate our defense probability for the final sectors.
     """
 
     response = pit_wall_agent(scenario)
