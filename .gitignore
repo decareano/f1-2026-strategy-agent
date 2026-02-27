@@ -1,0 +1,11 @@
+# Virtual Environment folders
+bin/
+lib/
+share/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+
+# Secrets
+.env
