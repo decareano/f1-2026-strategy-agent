@@ -30,7 +30,7 @@ def check_car_physics(target_flow_mj_h: float):
     """
     # Clip to FIA limit
     flow = min(target_flow_mj_h, FIA_CONSTRAINTS["MAX_ENERGY_FLOW_MJ_H"])
-    
+     
     # 1 MJ/h = 1/3.6 kW
     power_kw = flow / 3.6
     hp = power_kw * 1.34102

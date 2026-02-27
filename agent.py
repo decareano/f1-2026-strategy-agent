@@ -47,9 +47,9 @@ if __name__ == "__main__":
     
     try:
         # Strands extraction logic
-        if hasattr(response, 'message') and isinstance(response.message, dict):
-            print(response.message['content'][0]['text'])
-        else:
-            print(response.message)
+        #if hasattr(response, 'message') and isinstance(response.message, dict):
+           # print(response.message['content'][0]['text'])
+        pass
+            #print(response.message)
     except Exception as e:
-        print(response)
+        print(f"Error parsing: {e}")
